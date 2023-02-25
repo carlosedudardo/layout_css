@@ -2,3 +2,31 @@
     margin: 0px;
     padding: 0px;
 }
+
+.PaginaPricipal{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .PaginaPricipal header{
+    width: 100%;
+    background-color: #535353;
+} */
+.PaginaPricipal header,
+.PaginaPricipal footer{
+    width: 100%;
+    background-color: #535353;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colorWhite{
+    color: #ffffff;
+
+}
