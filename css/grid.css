@@ -1,0 +1,26 @@
+.PaginaPricipal{
+    display: grid;
+    grid-template-areas: "cabecera cabecera"
+    "navegacion contenido"
+    "PiePagina PiePagina";
+    /* grid-template-columns: 200px calc(100% - 200px); */
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 150px calc(100vh - 300px) 150px;
+    grid-gap: 20px;
+}
+
+.PaginaPricipal header{
+    grid-area: cabecera;
+}
+
+.PaginaPricipal nav{
+    grid-area: navegacion;
+}
+
+.PaginaPricipal article{
+    grid-area: contenido;
+}
+
+.PaginaPricipal footer{
+    grid-area: PiePagina;
+}
