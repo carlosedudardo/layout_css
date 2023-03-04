@@ -24,3 +24,30 @@
 .PaginaPricipal footer{
     grid-area: PiePagina;
 }
+
+.PaginaPricipal article p{
+    font-family: 'Rubik Iso', cursive;
+}
+
+.PaginaPricipal article p:hover{
+    color: red;
+    background-color: lightblue;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.PaginaPricipal nav ul li a{
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    word-spacing: 20px;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.PaginaPricipal nav ul li a:hover{
+    color: #ffffff;
+    background-color: #000000;
+    border-bottom: 2px solid #6d6d6d;
+    box-shadow: 10px 5px 16px -5px #9900ff;
+}
