@@ -6,7 +6,86 @@
 </head>
 <body>
     <script>
-        console.log('Hola mundo!!!!!');
+        var nombrePersona = 'Carlos';
+        let apellidoPersona = "Estupiñan";
+        let nombreMascota = "Pelusa";
+
+        let edad = 20;
+        let mayorEdad = true; //false
+
+        const EDAD_MAXIMA = 18;
+
+        let lista = [9,8,7,6,5,4];
+
+        let persona = {
+            nombre: 'carlos',
+            apellido: 'estupiñan',
+            edad: 19,
+            mayorEdad: true,
+            jobs:['cine', 'desarrollo de software', 'videojuegos'],
+            experienciaLaboral:{
+                empresa1: '5 años',
+                empresa2: '1 año',
+            }
+        };
+        console.log(persona.nombre,persona.jobs[1], persona.experienciaLaboral.empresa1);
+
+        let personas = [
+            {nombre: 'andrea', apellido: 'betancurt', edad:20},
+            {nombre: 'laura', apellido: 'ducuara', edad:24},
+            {nombre: 'camilo', apellido: 'gomez', edad:22},
+            {nombre: 'silvana', apellido: 'de los angeles', edad:14},
+            {nombre: 'acarlos', apellido: 'martinez', edad:15},
+
+        ];
+
+        for(let index=0; index < personas.length; index++) {
+            let persona = personas[index];
+            if(persona.edad >= 18){
+                console.log(persona.nombre, 'es mayor de edad');
+            }else {
+                console.log(persona.nombre, 'es menor de edad');
+            }
+            index++;
+        }
+        
+
+        console.log('while--------------------------------------------')
+        let index = 0
+        while(index < persona.length) {
+            let persona = personas[index];
+            if(persona.edad >= 18){
+                console.log(persona.nombre, 'es mayor de edad');
+            }else {
+                console.log(persona.nombre, 'es menor de edad');
+            }
+            index++;
+        }
+
+        console.log('while--------------------------------------------')
+        index = 0
+        let estado = true;
+        while(estado) {
+            let persona = personas[index];
+            if(persona.edad >= 18){
+                console.log(persona.nombre, 'es mayor de edad');
+            }else {
+                console.log(persona.nombre, 'es menor de edad');
+            }
+            index++;
+            if(index< lista.length){
+                estado = false;
+            }
+        }
+
+        // let lista = [9,8,7,6,5,4];
+        // console.log(lista);
+        // let lista2 = [...lista];
+        // lista2.push(3);
+        // console.log(lista2);
+
+        // console.log('Hola ' + nombrePersona + ' ' + apellidoPersona + '!!!!!');
+        // console.log('Hola' + nombreMascota + '!!!!!');
     </script>
 </body>
 </html>
