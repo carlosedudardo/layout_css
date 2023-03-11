@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Es">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -62,22 +62,22 @@
             index++;
         }
 
-        console.log('while--------------------------------------------')
-        index = 0
-        let estado = true;
-        while(estado) {
-            let persona = personas[index];
-            if(persona.edad >= 18){
-                console.log(persona.nombre, 'es mayor de edad');
-            }else {
-                console.log(persona.nombre, 'es menor de edad');
-            }
-            index++;
-            if(index == lista.length){
-                // estado = false;
-                break;
-            }
-        }
+        // console.log('while--------------------------------------------')
+        // index = 0
+        // let estado = true;
+        // while(estado) {
+        //     let persona = personas[index];
+        //     if(persona.edad >= 18){
+        //         console.log(persona.nombre, 'es mayor de edad');
+        //     }else {
+        //         console.log(persona.nombre, 'es menor de edad');
+        //     }
+        //     index++;
+        //     if(index == lista.length){
+        //         // estado = false;
+        //         break;
+        //     }
+        // }
 
         console.log('do while-------------------------------------');
         index = 0;
@@ -122,7 +122,7 @@
             }
         });
 
-        cosnsole.log('------------------------------');
+        console.log('------------------------------');
         let opcion = 'A';
         switch(opcion){
             case 'A':
@@ -169,7 +169,37 @@
         }
         validarEdad2(30);
         
-        
+
+        class Persona {
+            nombre = '';
+            apellido = '';
+            edad = 0;
+            email = '';
+
+            getNombreCompleto() {
+                return this.nombre + ' ' + this.apellido;
+            }
+
+            esMayorEdad() {
+                // if (this.edad >= 18){
+                //     return 'si';
+                // } else {
+                //     return 'no';
+                // }
+
+                    //segundo forma para la logica
+
+                return this.edad>=18?'Si':'No'; 
+            }
+        }
+
+        let persona1 = new Persona;
+        persona1.nombre = 'carlos';
+        persona1.apellido = 'estupiñan';
+        persona1.edad = 30;
+
+        console.log('Nombre de la persona:',persona1.getNombreCompleto());
+        console.log('Es mayor de edad?', persona1.esMayorEdad());
             
         // let lista = [9,8,7,6,5,4];
         // console.log(lista);
@@ -179,6 +209,23 @@
 
         // console.log('Hola ' + nombrePersona + ' ' + apellidoPersona + '!!!!!');
         // console.log('Hola' + nombreMascota + '!!!!!');
+
+        class Estudiante extends Persona {
+            codigo = '';
+            cantidadMaterias = 0;
+        }
+
+        class Docente extends Persona {
+            codigo = '';
+        }
+
+        let estudiante1 = new Estudiante();
+        estudiante1.nombre = 'carlos';
+        estudiante1.apellido = 'estupiñan';
+        estudiante1.codigo = '55221501';
+        estudiante1.cantidadMaterias = 7;
+        console.log('Nombre del estudiante:', estudiante1.getNombreCompleto());
+
     </script>
 </body>
 </html>
